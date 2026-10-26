@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask Gemini questions and receive AI-powered answers.">
+    <title>Ask Gemini | AI Assistant</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">✦</div>
+            <h1>Ask Gemini</h1>
+            <p>Ask a question. Explore an idea. Learn something new.</p>
+        </header>
+
+        <section class="card">
+            <form id="question-form">
+                <label for="question">What would you like to ask?</label>
+                <textarea
+                    id="question"
+                    name="question"
+                    placeholder="Type your question here..."
+                    maxlength="5000"
+                    required
+                ></textarea>
+
+                <div class="form-bottom">
+                    <span id="char-count">0 / 5000</span>
+                    <button type="submit" id="ask-btn">Ask Gemini</button>
+                </div>
+            </form>
+
+            <div class="answer-section">
+                <div class="answer-heading">
+                    <h2>Answer</h2>
+                    <span id="status-badge">Ready</span>
+                </div>
+
+                <div id="answer" aria-live="polite">
+                    Your answer will appear here.
+                </div>
+
+                <button type="button" id="copy-btn" hidden>
+                    Copy answer
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <p>Powered by the Gemini API</p>
+        </footer>
+    </main>
+</body>
+</html>
